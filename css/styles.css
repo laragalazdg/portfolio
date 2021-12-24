@@ -368,11 +368,11 @@
    
     } 
 
-.wrapper .card1 a:active,
-.wrapper .card2 a:active,
-.wrapper .card3 a:active{
-    color: white;
-}
+    .wrapper .card1 a:active,
+    .wrapper .card2 a:active,
+    .wrapper .card3 a:active{
+        color: white;
+    }
 
 
     .wrapper .footer{
