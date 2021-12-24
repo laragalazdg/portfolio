@@ -133,7 +133,7 @@
    
 }
 /*RESPONSIVE*/
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     .wrapper {
 
         display: grid;
@@ -227,6 +227,99 @@
         height: 50px;
     }
    
+}
+
+@media screen and (max-width: 600px){
+    .wrapper {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px, 400px, repeat(3, 1fr),50px;
+        grid-template-areas:"navbar   navbar   navbar"
+                             "contenido  contenido  contenido"
+                             "card1    card1    card1"
+                             "card2    card2    card2"
+                             "card3    card3    card3"
+                             "footer   footer   footer";
+        width: 90%;
+
+    }
+
+    .wrapper .navbar {
+        /* background-color: #fe6871;  */
+        grid-area: navbar;
+        height: 80px;
+        width: 100%;
+    }
+
+    .sidenav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+  
+    }
+    .sidenav a {
+        padding: 40px;
+        text-decoration: none;
+        color: var(--main-color);
+        width: 30px;
+        height: 30px;
+     }
+
+     .sidenav a:hover {
+        color: var(--hover-main-color);
+        transform: scale(1.5);
+     } 
+
+    .wrapper .contenido{
+        grid-area: contenido;
+        height: 400px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        
+    }
+
+    
+    .contenido .present h1 {
+        font-size: 60px;
+    }
+    
+    .contenido .text{
+     /* font-weight: 300; */
+     line-height: 2;
+     /* margin: 10px; */
+    } 
+
+    .wrapper .card1{
+        grid-area: card1;
+
+    }
+
+    .wrapper .card2{
+        grid-area: card2;
+
+    }
+
+    .wrapper .card3{
+        grid-area: card3;
+
+    }
+    
+
+    .wrapper .card1:hover,
+    .wrapper .card2:hover,
+    .wrapper .card3:hover{
+        transform: translateY(-10px);
+        background-color: var(--hover-main-color);
+    } 
+
+    .wrapper .footer{
+        grid-area: footer;
+        height: 50px;
+    }
+
 }
 
 
