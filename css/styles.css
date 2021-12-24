@@ -17,7 +17,7 @@
     grid-template-areas: "navbar contenido  contenido  contenido"
                          "navbar contenido  contenido  contenido"
                          "navbar card1    card2    card3"
-                         "footer footer   footer   footer ";
+                         "navbar footer   footer   footer ";
     grid-gap: 10px;
     height: 100vh;
     width: 100%;
@@ -80,6 +80,8 @@
 
 .contenido .present h1 {
     font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--main-color);
 }
 
 .contenido .text{
@@ -107,7 +109,8 @@
 .wrapper .card1,
 .wrapper .card2,
 .wrapper .card3 {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    border:  2px solid var(--main-color);
     border-radius: 8px;
     box-shadow: 0 12px 32px 4px rgba(black, .5);
     height: 200px;
@@ -129,6 +132,7 @@
 .wrapper .card1:hover,
 .wrapper .card2:hover,
 .wrapper .card3:hover{
+    border:  0px;
     transform: translateY(-15px);
     background-color: var(--hover-main-color);
 } 
