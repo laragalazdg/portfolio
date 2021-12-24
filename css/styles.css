@@ -1,6 +1,7 @@
 :root {
     --main-color: #fe6871;
     --hover-main-color:#ffcebf;
+    --active-main-color:#e2454f;
 }
 *{
     margin: 0;
@@ -28,6 +29,7 @@
     /* background-color: #fe6871; */
     grid-area: navbar;
     width: 150px;
+  
 }
 
 
@@ -49,9 +51,17 @@
     height:25px;
  }
 
+ .sidenav a:link{
+    color:var(--main-color);
+ }
+
 .sidenav a:hover {
     color: var(--hover-main-color);
     transform: scale(1.5);
+ } 
+
+ .sidenav a:active {
+    color: var(--active-main-color);
  } 
 
 .wrapper .contenido {
@@ -123,6 +133,19 @@
     background-color: var(--hover-main-color);
 } 
 
+.wrapper .card1:active,
+.wrapper .card2:active,
+.wrapper .card3:active{
+    background-color: var(--active-main-color);
+   
+} 
+
+.wrapper .card1 a:active,
+.wrapper .card2 a:active,
+.wrapper .card3 a:active{
+    color: white;
+}
+
 .wrapper .footer{
     /* background-color: bisque; */
     grid-area: footer;
@@ -130,6 +153,8 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    font-size: small;
+    color: rgb(158, 156, 156);
    
 }
 /*RESPONSIVE*/
@@ -173,6 +198,10 @@
         color: var(--hover-main-color);
         transform: scale(1.5);
      } 
+     .sidenav a:active {
+        color: var(--active-main-color);
+     } 
+    
 
     .wrapper .contenido{
         grid-area: contenido;
@@ -222,6 +251,20 @@
         background-color: var(--hover-main-color);
     } 
 
+    .wrapper .card1:active,
+    .wrapper .card2:active,
+    .wrapper .card3:active{
+    background-color: var(--active-main-color);
+   
+    } 
+
+    .wrapper .card1 a:active,
+    .wrapper .card2 a:active,
+    .wrapper .card3 a:active{
+    color: white;
+    }
+
+
     .wrapper .footer{
         grid-area: footer;
         height: 50px;
@@ -266,6 +309,9 @@
         height: 30px;
      }
 
+     .sidenav a:active {
+        color: var(--active-main-color);
+     } 
      .sidenav a:hover {
         color: var(--hover-main-color);
         transform: scale(1.5);
@@ -314,6 +360,20 @@
         transform: translateY(-10px);
         background-color: var(--hover-main-color);
     } 
+
+    .wrapper .card1:active,
+    .wrapper .card2:active,
+    .wrapper .card3:active{
+        background-color: var(--active-main-color);
+   
+    } 
+
+.wrapper .card1 a:active,
+.wrapper .card2 a:active,
+.wrapper .card3 a:active{
+    color: white;
+}
+
 
     .wrapper .footer{
         grid-area: footer;
